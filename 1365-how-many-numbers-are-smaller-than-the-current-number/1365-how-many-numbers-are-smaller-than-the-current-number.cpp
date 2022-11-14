@@ -18,6 +18,7 @@ public:
             ans.push_back(count);
                 count = 0;
         }
+        cout<< ans.size();
         return ans;
     }
 };
