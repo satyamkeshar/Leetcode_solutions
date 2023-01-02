@@ -1,20 +1,19 @@
 class Solution {
 public:
     bool divideArray(vector<int>& nums) {
-        unordered_map<int, int> umap;
+        int n = nums.size();
+        unordered_map<int, int> mpp;
         
-        for(int i =0; i<nums.size(); i++)
-        {
-            umap[nums[i]]++;
+        for(int i=0; i<n; i++){
+            mpp[nums[i]]++;    
         }
         
-        for(auto it: umap)
-        {
-            if(it.second %2 != 0)
-            {
-                return 0;
-            }
+        //count total pairs
+        int totalPairs = 0;
+        for(auto it: mpp){
+            totalPairs += it.second/2;
         }
-        return 1;
+        
+        return (totalPairs == n/2);
     }
 };
