@@ -20,7 +20,7 @@ public:
             else if(it.second>2)
             {
                 pair += it.second/2;
-                if(it.second%2 !=0)
+                if(it.second%2==1)
                 left++;
             }
             else if(it.second==1)
