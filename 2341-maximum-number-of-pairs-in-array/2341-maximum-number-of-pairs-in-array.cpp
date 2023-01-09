@@ -23,7 +23,7 @@ public:
                 if(it.second%2==1)
                 left++;
             }
-            else if(it.second==1)
+            else
                 left++;
             // nums.erase(it);
         }
