@@ -18,9 +18,6 @@ public:
             temp = temp->next;
             count++;
         }
-        if(count %2!=0)
-            count = count/2;
-        else
             count = count/2;
         
         for(int i =1; i<=count; i++)
