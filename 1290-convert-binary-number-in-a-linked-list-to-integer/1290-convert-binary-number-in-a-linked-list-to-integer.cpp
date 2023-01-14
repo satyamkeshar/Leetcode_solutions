@@ -26,8 +26,5 @@ public:
             base++;
         }
         return num1;
-//         cout<<num;
-//         num1 =  stoll(num, 0, num.length()-1);
-//         return num1;
     }
 };
