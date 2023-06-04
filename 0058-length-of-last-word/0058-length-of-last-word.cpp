@@ -1,13 +1,26 @@
 class Solution {
 public:
     int lengthOfLastWord(string s) {
-         int ans=0, i=s.size()-1;
-        while(i>=0 && s[i]==' '){
-            i--;
+          stack<char> st ; 
+        int cnt = 0 ; 
+        for (int i = 0 ; i < s.length() ; i ++)
+        {
+            st.push(s[i]) ; 
         }
-        while(i>=0 && s[i]!=' '){
-            i--; ans++;
+
+ 
+        while (st.top() == ' ')
+        {
+            st.pop() ; 
         }
-        return ans;
+
+        while (!st.empty() && st.top() != ' ')
+        {
+            cnt ++ ; 
+            st.pop() ; 
+        }
+
+        return cnt ; 
     }
+    
 };
