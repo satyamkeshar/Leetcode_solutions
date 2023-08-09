@@ -1,22 +1,23 @@
 class Solution {
 public:
     int sumOfUnique(vector<int>& nums) {
-        unordered_map<int, int> umap;
-        int sum=0;
+        unordered_map<int, int>umap;
+        
         for(int i =0; i<nums.size(); i++)
         {
             umap[nums[i]]++;
         }
-        
-        for(auto x: umap)
+        int sum =0;
+        for(auto i:umap)
         {
-            if(x.second ==1)
+            if(i.second ==1)
             {
-                sum+= x.first;
+                sum+=i.first;
             }
         }
+        
         return sum;
         
-    }
+        }
     
 };
